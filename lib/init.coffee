@@ -1,7 +1,7 @@
 module.exports =
   configDefaults:
-    puppetLintArguments: '--no-autoloader_layout-check'
-    puppetLintExecutablePath: null
+    puppetParseArguments: ''
+    puppetParseExecutablePath: null
 
   activate: ->
-    console.log 'activate linter-puppet-lint'
+    console.log 'activate linter-puppet-parse'

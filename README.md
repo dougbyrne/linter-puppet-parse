@@ -1,21 +1,18 @@
-# linter-puppet-lint
+# linter-puppet-parse
 
-This package will lint your `.pp` opened files in Atom through [puppet-lint](http://puppet-lint.com/).
+This package will lint your `.pp` opened files in Atom through [puppet parser validate](https://docs.puppetlabs.com/references/3.5.0/man/parser.html).
 
 ## Installation
 
-* Install [puppet-lint](http://puppet-lint.com/)
+* Install puppet
 * `$ apm install language-puppet` (if you don't have [language-puppet](https://github.com/atom/language-puppet) installed)
 * `$ apm install linter` (if you don't have [linter](https://github.com/AtomLinter/Linter) installed)
-* `$ apm install linter-puppet-lint`
+* `$ apm install linter-puppet-parse`
 
 ## Settings
-You can configure linter-puppet-lint by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
+You can configure linter-puppet-parse by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
 ```
-'linter-puppet-lint':
-  'puppetLintArguments': '--no-autoloader_layout-check'
-  'puppetLintExecutablePath': null # puppet-lint path. run 'which puppet-lint' to find the path
+'linter-puppet-parse':
+  'puppetParseArguments': ''
+  'puppetParseExecutablePath': null # puppet-parse path. run 'which puppet' to find the path
 ```
-
-## Donation
-[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)
