@@ -22,15 +22,15 @@ class LinterPuppetParse extends Linter
   constructor: (editor) ->
     super(editor)
 
-    @executablePathListener = atom.config.observe 'linter-pupppet-parse.puppetParseArguments', =>
+    @executablePathListener = atom.config.observe 'linter-puppet-parse.puppetParseArguments', =>
       @updateCmd()
 
-    @argumentsListener = atom.config.observe 'linter-pupppet-parse.puppetParseExecutablePath', =>
-      @executablePath = atom.config.get 'linter-pupppet-parse.puppetParseExecutablePath'
+    @argumentsListener = atom.config.observe 'linter-puppet-parse.puppetParseExecutablePath', =>
+      @executablePath = atom.config.get 'linter-puppet-parse.puppetParseExecutablePath'
 
   updateCmd: ->
     cmd = @cmd.split ' '
-    args = atom.config.get 'linter-pupppet-parse.puppetParseArguments'
+    args = atom.config.get 'linter-puppet-parse.puppetParseArguments'
 
     if args
       @cmd = "#{cmd[0]} #{args}"
